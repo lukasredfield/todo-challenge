@@ -1,9 +1,5 @@
 from django.db import models
 from django.contrib.auth. models import User
-from django.contrib import admin, messages
-
-
-# Create your models here.
 
 class Task(models.Model):
     title = models.CharField(max_length=50) 
@@ -15,9 +11,12 @@ class Task(models.Model):
  
     class Meta:
         verbose_name='task'
-        verbose_name_plural='taks'
+        verbose_name_plural='tasks'
 
     def __str__(self):
         return self.title
     
+
+
+
 

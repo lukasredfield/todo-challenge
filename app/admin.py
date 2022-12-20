@@ -1,7 +1,6 @@
 from .models import Task
 from django.contrib import admin
 
-
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'created','deadline')
     ordering = ('author', 'created')
@@ -11,3 +10,4 @@ class TaskAdmin(admin.ModelAdmin):
 
 admin.site.site_header = "Invera Task"
 admin.site.register(Task, TaskAdmin)
+

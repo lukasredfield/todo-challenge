@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+from django.contrib.admin.models import LogEntry
+    
+def index(request):
+    return HttpResponse(LogEntry.objects.all())
